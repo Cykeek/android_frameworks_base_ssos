@@ -196,6 +196,9 @@
     <string name="keyguard_indication_smart_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Smart Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%1$s</xliff:g> until full)</string>
     <string name="keyguard_plugged_in_smart_charging">Smart Charging</string>
 
+    <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
+    <string name="custom_hint">Swipe from icon to launch</string>
+
     <!-- Screenshot Delete Toast -->
     <string name="delete_screenshot_toast">Screenshot deleted</string>
 
@@ -206,5 +209,8 @@
     <string name="sensor_privacy_mode_tile">Sensors</string>
     <string name="quick_settings_on">On</string>
     <string name="quick_settings_off">Off</string>
+
+    <!-- Change clockface -->
+    <string name="change_clock_face">Swipe to change the clock face</string>
 
 </resources>
