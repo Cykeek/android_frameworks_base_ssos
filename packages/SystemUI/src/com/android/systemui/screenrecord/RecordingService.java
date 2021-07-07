@@ -237,6 +237,35 @@ public class RecordingService extends Service implements MediaRecorder.OnInfoLis
         return Service.START_STICKY;
     }
 
+    protected void doStartRecording(int audioSource, boolean showTaps, boolean showStopDot,
+            boolean lowQuality, boolean longerDuration) {
+        int mCurrentUserId = mUserContextTracker.getCurrentUserContext().getUserId();
+        mAudioSource = ScreenRecordingAudioSource
+                .values()[audioSource];
+        Log.d(TAG, "recording with audio source" + mAudioSource);
+        mShowTaps = showTaps;
+        mShowStopDot = showStopDot;
+        mLowQuality = lowQuality;
+        mLongerDuration = longerDuration;
+
+        mOriginalShowTaps = Settings.System.getInt(
+                getApplicationContext().getContentResolver(),
+                Settings.System.SHOW_TOUCHES, 0) != 0;
+
+        setTapsVisible(mShowTaps);
+        setStopDotVisible(mShowStopDot);
+
+        mRecorder = new ScreenMediaRecorder(
+                mUserContextTracker.getCurrentUserContext(),
+                mCurrentUserId,
+                mAudioSource,
+                this
+        );
+        setLowQuality(mLowQuality);
+        setLongerDuration(mLongerDuration);
+        startRecording();
+    }
+
     @Override
     public IBinder onBind(Intent intent) {
         return null;
