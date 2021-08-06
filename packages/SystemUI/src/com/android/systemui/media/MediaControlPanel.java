@@ -101,6 +101,8 @@ public class MediaControlPanel {
     private final ViewOutlineProvider mViewOutlineProvider;
     private final MediaOutputDialogFactory mMediaOutputDialogFactory;
     private final MediaArtworkProcessor mMediaArtworkProcessor;
+    private boolean mBackgroundArtwork = false;
+    private int mArtworkFadeLevel = 30;
 
     /**
      * Initialize a new control panel
