@@ -759,7 +759,7 @@ public class NotificationMediaManager implements Dumpable, MediaDataManager.List
                                 + mBackdropBack.getDrawable());
                     }
                     mBackdropFront.animate()
-                            .setDuration(250)
+                            .setDuration(130)
                             .alpha(0f).withEndAction(mHideBackdropFront);
                 }
             }
