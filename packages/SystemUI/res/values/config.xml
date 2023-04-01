@@ -346,7 +346,7 @@
     <string name="config_navBarLayoutQuickstep" translatable="false">back[1.7WC];home;contextual[1.7WC]</string>
     <string name="config_navBarLayoutHandle" translatable="false">back[40AC];home_handle;ime_switcher[40AC]</string>
 
-    <bool name="quick_settings_show_full_alarm">false</bool>
+    <bool name="quick_settings_show_full_alarm">true</bool>
 
     <!-- Whether to show a warning notification when device's skin temperature is high. -->
     <integer name="config_showTemperatureWarning">0</integer>
