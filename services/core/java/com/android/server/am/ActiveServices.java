@@ -5050,5 +5050,6 @@ public final class ActiveServices {
 
     private void resetFgsRestrictionLocked(ServiceRecord r) {
         r.mAllowWhileInUsePermissionInFgs = false;
+        r.mLastSetFgsRestrictionTime = 0;
     }
 }
